@@ -12,6 +12,8 @@ body {
   border: 0;
 }
 
+/* displayes the logo image as background */
+/* we are styling the div by the image width and height */
 #logo-img {
   background: url('../images/restaurant-logo_large.png') no-repeat;
   width: 150px;
@@ -22,7 +24,9 @@ body {
 .navbar-brand {
   padding-top: 25px;
 }
-.navbar-brand h1 { /* Restaurant name */
+
+/* Restaurant name */
+.navbar-brand h1 { 
   font-family: 'Lora', serif;
   color: #557c3e;
   font-size: 1.5em;
@@ -33,29 +37,39 @@ body {
   margin-bottom: 0;
   line-height: .75;
 }
+/* disable the underline */
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
 }
-.navbar-brand p { /* Kosher cert */
+
+/* Kosher cert */
+.navbar-brand p { 
   color: #000;
   text-transform: uppercase;
   font-size: .7em;
   margin-top: 15px;
 }
-.navbar-brand p span { /* Star-K */
+
+/* Star-K */
+/* we are doing this because we want to align the Kosher Certificate text in the center of the kosher star img */
+.navbar-brand p span { 
   vertical-align: middle;
 }
 
+/* nav-list is the ul element id */
 #nav-list {
   margin-top: 10px;
 }
+
 #nav-list a {
   color: #951C49;
   text-align: center;
 }
+
 #nav-list a:hover {
   background: #E7E7E7;
 }
+
 #nav-list a span {
   font-size: 1.8em;
 }
@@ -63,22 +77,29 @@ body {
 #phone {
   margin-top: 5px;
 }
-#phone a { /* Phone number */
+
+/* Phone number */
+#phone a { 
   text-align: right;
   padding-bottom: 0;
 }
-#phone div { /* We Deliver */
+
+/* We Deliver */
+#phone div { 
   color: #557c3e;
   text-align: right;
   padding-right: 15px;
 }
 
+/* change the style of the collapse button*/
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #61122f;
 }
+
+/* because the collapsed button is floated to right and the brand name and the Kosher certificate is floated to left */
 .navbar-header button.navbar-toggle {
   clear: both;
-  margin-top: -30px;
+  margin-top: -30px; /* makes smaller the header region */
 }
 /* END HEADER */
 
@@ -240,13 +261,17 @@ h3.menu-item-title {
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
+  
   /* Header */
+  /* changes the logo img to a smaller one and also we set the div of the image to a smaller one */
+  
   #logo-img {
     background: url('../images/restaurant-logo_medium.png') no-repeat;
     width: 100px;
     height: 100px;
     margin: 5px 5px 5px 0;
   }
+  
   /* End Header */
 
   /* Home Page */
@@ -270,19 +295,27 @@ h3.menu-item-title {
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
   /* Header */
+  
+  /* style for the div with name and Kosher certificate */
   .navbar-brand {
     padding-top: 10px;
     height: 80px;
   }
-  .navbar-brand h1 { /* Restaurant name */
+  
+  /* Restaurant name */
+  .navbar-brand h1 { 
     padding-top: 10px;
-    font-size: 5vw; /* 1vw = 1% of viewport width */
+    font-size: 5vw; /* 1vw = 1% of viewport width , the font size will be relative to the screem width */
   }
-  .navbar-brand p { /* Kosher cert */
+  
+  /* Kosher cert */
+  .navbar-brand p { 
     font-size: .6em;
     margin-top: 12px;
   }
-  .navbar-brand p img { /* Star-K */
+  
+   /* Star-K */
+  .navbar-brand p img {
     height: 20px;
   }
 
