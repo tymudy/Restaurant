@@ -104,6 +104,7 @@ body {
 /* END HEADER */
 
 /* FOOTER */
+/* overriding a bootstrap css class */
 .panel-footer {
   margin-top: 30px;
   padding-top: 35px;
@@ -111,23 +112,33 @@ body {
   background-color: #222;
   border-top: 0;
 }
+/* targetting the div with the sections, the purpose of this is to separate the copyright from the sections */
 .panel-footer div.row {
   margin-bottom: 35px;
 }
+
+/* separate the line hight of the rows inside the address and hours section*/
 #hours, #address {
   line-height: 2;
 }
+
+/* increase the font-size of every span element that is a direct child of hours or address id element  */
 #hours > span, #address > span {
   font-size: 1.3em;
 }
+
+/* targetting a note of the address id element */
 #address p {
   color: #557c3e;
   font-size: .8em;
   line-height: 1.8;
 }
+
+/* we are targetting the peoples testimonials */
 #testimonials {
   font-style: italic;
 }
+/* separatting the testimonials by giving some margin between them*/
 #testimonials p:nth-child(2) {
   margin-top: 25px;
 }
@@ -143,34 +154,40 @@ body {
 
 #menu-tile, #specials-tile, #map-tile {
   height: 250px;
-  width: 100%;
+  width: 100%; /* as wide as his container is */
   margin-bottom: 15px;
-  position: relative;
+  position: relative; /* will be an ancor for it's child elements */
   border: 2px solid #3F0C1F;
-  overflow: hidden;
+  overflow: hidden; /* the map will probably owerflow so we want that part hidden */
 }
+
+/* change the style when user hovers with the mouse pointer */
 #menu-tile:hover, #specials-tile:hover, #map-tile:hover {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
+
+/* fill out the background for each tile */
 #menu-tile {
   background: url('../images/menu-tile.jpg') no-repeat;
-  background-position: center;
+  background-position: center; /* to stay always in the center of the container so when we squise the browser it will display it fine */
 }
 #specials-tile {
   background: url('../images/specials-tile.jpg') no-repeat;
   background-position: center;
 }
+
+/* fixing the position of the tiles name and give them some styling */
 #menu-tile span, #specials-tile span, #map-tile span {
-  position: absolute;
+  position: absolute; /* positioning absolutly within the container in which stands */
   bottom: 0;
   right: 0;
-  width: 100%;
+  width: 100%; /* 100% of the width of the containing element */
   text-align: center;
   font-size: 1.6em;
   text-transform: uppercase;
   background-color: #000;
   color: #fff;
-  opacity: .8;
+  opacity: .8; /* to be a little bit transparent */
 }
 /* END HOME PAGE */
 
@@ -253,6 +270,8 @@ h3.menu-item-title {
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
+  
+  /* set the backround image for jumbotron*/
   .container .jumbotron {
     background: url('../images/jumbotron_1200.jpg') no-repeat;
     height: 675px;
@@ -275,6 +294,7 @@ h3.menu-item-title {
   /* End Header */
 
   /* Home Page */
+  /* set the backround image for jumbotron*/
   .container .jumbotron {
     background: url('../images/jumbotron_992.jpg') no-repeat;
     height: 558px;
@@ -285,6 +305,7 @@ h3.menu-item-title {
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
   /* Home Page */
+  /* set the backround image for jumbotron*/
   .container .jumbotron {
     background: url('../images/jumbotron_768.jpg') no-repeat;
     height: 432px;
@@ -319,12 +340,15 @@ h3.menu-item-title {
     height: 20px;
   }
 
+  /* style the collapsed button dropdown list */
   #collapsable-nav a { /* Collapsed nav menu text */
     font-size: 1.2em;
   }
-  #collapsable-nav a span { /* Collapsed nav menu glyph */
-    font-size: 1em;
-    margin-right: 5px;
+  
+  /* Collapsed nav menu glyph */
+  #collapsable-nav a span { 
+    font-size: 1em; /* i.e. I want you to be 100% the size of <a> element that you inherited */
+    margin-right: 5px; /* because the name and the icon are nto close */
   }
 
   #call-btn > a {
@@ -362,6 +386,9 @@ h3.menu-item-title {
     margin-top: 30px;
     padding: 0;
   }
+  
+  /* We specifie the width of the name of the menu tile but since the container floated to left we had to specify the margin-left and margin-right to auto to center the container */
+  /* We can use margin auto only if the element is sized */
   #menu-tile, #specials-tile {
     width: 360px;
     margin: 0 auto 15px;
@@ -374,7 +401,7 @@ h3.menu-item-title {
     text-align: center;
   }
   .menu-item-description {
-    text-align: center;;
+    text-align: center;
   }
 }
 
@@ -382,13 +409,15 @@ h3.menu-item-title {
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 479px) {
   /* Header */
-  .navbar-brand h1 { /* Restaurant name */
+  /* Restaurant name , we want to be a little bit bigger */
+  .navbar-brand h1 { 
     padding-top: 5px;
     font-size: 6vw;
   }
   /* End Header */
   
   /* Home page */
+  /* We have to resize the tile to fit in a smaller width of device */
   #menu-tile, #specials-tile {
     width: 280px;
     margin: 0 auto 15px;
