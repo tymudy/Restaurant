@@ -196,18 +196,20 @@ body {
 /* has the name and the img inside of it */
 /* we style the container width and height according to the size of the picture */
 .category-tile { 
-  position: relative;
+  position: relative; /* ancor */
   border: 2px solid #3F0C1F;
-  overflow: hidden;
+  overflow: hidden; /* everything that owerflows should be clipped */
   width: 200px;
   height: 200px;
-  margin: 0 auto 15px;
+  margin: 0 auto 15px; /* we center the container */
 }
+
+/* title of the actual category */
 .category-tile span {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 100%;
+  width: 100%; /* takes the entery width  */
   text-align: center;
   font-size: 1.2em;
   text-transform: uppercase;
@@ -215,10 +217,14 @@ body {
   color: #fff;
   opacity: .8;
 }
+
+/* box shadow */
 .category-tile:hover {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 
+/* targetting the next div sibling of menu-vategories-title id */
+/* we want to separate the title of the page from the note for the customers and menu categories */
 #menu-categories-title + div {
   margin-bottom: 50px;
 }
@@ -426,6 +432,7 @@ h3.menu-item-title {
     margin: 0 auto 15px;
   }
 
+  /* copy from bootsrap the styles for col-xs-12 */
   .col-xxs-12 {
     position: relative;
     min-height: 1px;
