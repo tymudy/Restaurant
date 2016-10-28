@@ -231,31 +231,43 @@ body {
 /* END MENU CATEGORIES PAGE */
 
 /* SINGLE CATEGORY PAGE */
+
+/* separate from the next row */
 .menu-item-tile {
   margin-bottom: 25px;
 }
+
+/* shows up when the width is 80% (small) */
 .menu-item-tile hr {
   width: 80%;
 }
+
+/* styling the price */
 .menu-item-tile .menu-item-price {
   font-size: 1.1em;
   text-align: right;
-  margin-top: -15px;
+  margin-top: -15px; /* because we put the picture code in the bottom-right corner of the picture the price wa pushed down */
   margin-right: -15px;
 }
+
+/* unit portion beside the price we want to be smaller */
 .menu-item-tile .menu-item-price span {
   font-size: .6em;
 }
+
+/* styling the picture */
 .menu-item-photo {
-  position: relative;
+  position: relative; /* ancor */
   border: 2px solid #3F0C1F; 
   overflow: hidden;
   padding: 0;
   margin-right: -15px;
   margin-left: auto;
   margin-bottom: 20px;
-  max-width: 250px;
+  max-width: 250px; /* the image is responsive and his width in the html is set to 250px so we don't want to be more than that */
 }
+
+/* the div is the coresponding code to the picture */
 .menu-item-photo div {
   position: absolute;
   bottom: 0;
@@ -264,12 +276,18 @@ body {
   background-color: #557c3e;
   text-align: center;
 }
+
+/* move away from the other item which is in the second column or the browser edge itself  */
 .menu-item-description {
   padding-right: 30px;
 }
+
+/* styling the title of the menu item */
 h3.menu-item-title {
   margin: 0 0 10px;
 }
+
+/* styling the details */
 .menu-item-details {
   font-size: .9em;
   font-style: italic;
@@ -360,6 +378,7 @@ h3.menu-item-title {
     margin-right: 5px; /* because the name and the icon are nto close */
   }
 
+  /* give e different style for the phone number in small devices */
   #call-btn > a {
     font-size: 1.5em;
     display: block;
@@ -403,12 +422,17 @@ h3.menu-item-title {
     margin: 0 auto 15px;
   }
 
+  /* centering the picture */
   .menu-item-photo {
     margin-right: auto;
   }
+  
+  /* center the price of the item */
   .menu-item-tile .menu-item-price {
     text-align: center;
   }
+  
+  /* center the description of the menu item */
   .menu-item-description {
     text-align: center;
   }
