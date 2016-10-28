@@ -36,7 +36,7 @@
             <div id="logo-img"></div>
           </a>
           
-          <!-- any company namr should go under the navbar-brand Bootstrap class -->
+          <!-- any company name should go under the navbar-brand Bootstrap class -->
           
           <div class="navbar-brand">
             <a href="index.html"><h1>David Chu's China Bistro</h1></a>
@@ -62,6 +62,12 @@
           </button>
         </div>
         
+        <!-- collapsable-nav id is used as data-target to select all elements of it and put inside the button -->
+        <!-- nav and navbar-nav says that their gonna be a component of the navigation bar , this classes turns the unordered list in a menu-->
+        <!-- navbar-nav is a class that floats the navbar to the right of the conatiner --> 
+        <!-- glyphicon brings in a bootstrap defined icon font (vector based shape) -->
+        <!-- the presents of <br> is to stack the glyphicon and the span element, also we want hat this break to disapear when the width of the browser is small -->
+        
         <div id="collapsable-nav" class="collapse navbar-collapse">
            <ul id="nav-list" class="nav navbar-nav navbar-right">
             <li class="visible-xs active">
@@ -80,8 +86,8 @@
               <a href="#">
                 <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
             </li>
-            <li id="phone" class="hidden-xs">
-              <a href="tel:410-602-5008">
+            <li id="phone" class="hidden-xs"> <!-- we want to hide the element when the screen is to small, because we don't want to be inside the collapsed button-->
+              <a href="tel:410-602-5008"> <!-- triggers the phone feature to call-->
                 <span>410-602-5008</span></a><div>* We Deliver</div>
             </li>
           </ul><!-- #nav-list -->
