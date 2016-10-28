@@ -12,18 +12,32 @@
   </head>
 <body>
   <header>
+    
     <!-- Creating the navigation bar-->
     <!-- navbar-default (class that shares properties of the base class) is a subclass of navbar class which are Bootstrap classes-->
-      <!-- container-fluid straches all away of the browser ad it has some padding and margin set-->
-      <!-- container changes it's width based on the width of the browser, not gonna stretch all along the browser, but constrain itself to be about in the middle -->
-      <!-- we put the container inside the nav element because we do want that the backround color of the header to stretch all along with the browser width--> 
+    <!-- container-fluid straches all away of the browser ad it has some padding and margin set-->
+    <!-- container changes it's width based on the width of the browser, not gonna stretch all along the browser, but constrain itself to be about in the middle -->
+    <!-- we put the container inside the nav element because we do want that the backround color of the header to stretch all along with the browser width--> 
+    
     <nav id="header-nav" class="navbar navbar-default">  
       <div class="container">
+        
+        <!-- navbar-header is something for grouping the brand (name and logo of the restaurant) for a better mobile view -->
+        <!-- the logo image will be inserted as a backround image and will be clickable-->
+        
         <div class="navbar-header">
-          <a href="index.html" class="pull-left visible-md visible-lg">
+          
+          <!-- because the logo img and the name of the restaurant and the kosher certification are stacked we need to float left the logo image only because the elements inside the navbar-brand are floated left-->
+          
+          <!-- Bootstrap class pull-left does the float: left -->
+          <!-- We want only to display the logo when the browser is md or lg, visible-md class and visible-log class does that -->
+          
+          <a href="index.html" class="pull-left visible-md visible-lg"> 
             <div id="logo-img"></div>
           </a>
-
+          
+          <!-- any company namr should go under the navbar-brand Bootstrap class -->
+          
           <div class="navbar-brand">
             <a href="index.html"><h1>David Chu's China Bistro</h1></a>
             <p>
@@ -31,7 +45,15 @@
               <span>Kosher Certified</span>
             </p>
           </div>
-
+           
+          <!-- We do this to collapse the menu inside one button -->
+          <!-- navbar-toggle controls the positioning of the button (float right and only will be displayed when the browser has a small width)-->
+          <!-- collapsed class does not exist in bootstrap css, but signifies a bootstrap plugin that this button is in a collapsed state and nobody clickes on it and when someone clickes on it this collapse class will disapear-->
+          <!-- data-toggle and data-target are html5 api attributes that allowse javascript to get this attributes very easily in a standardized way-->
+          <!-- aria-expanded is for screen readers -->
+          <!-- class sr-only means that will not show up in the browser screen it's only for screen readers-->
+          <!-- class icon-bar puts all of the horizontal lines/ icons inside the button -->
+          
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
